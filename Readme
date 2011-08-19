@@ -1,1 +1,7 @@
-This a node.js module for working with Raydash's live audio/video functionality. This is still very experimental. More stable releases will be coming soon.
+This a node.js module for working with Raydash's live audio/video functionality. 
+
+==Testing
+You must create a test_settings.json with a valid Raydash userid/secret to test. This file should look like: 
+
+    {"userid":"YOUR_RAYDASH_USERID",
+	 "secret":"YOUR_RAYDASH_SECRET"}
