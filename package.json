@@ -1,17 +1,20 @@
 {
-  "name": "raydash-node",
+  "name": "raydash",
   "description": "Add live video to your website with Raydash's Node.js solution",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "http://www.raydash.com",
   "repository": {
     "url": ""
   },
+  "main": "lib/raydash",
   "author": "Gershon Bialer <gershon@raydash.com> (http://www.raydash.com)",
   "directories": {
-    "lib": "lib"
+    "lib": "./lib"
   },
   "engines": {
     "node": "*"
-  }
+  },
+  "bin" : {"raydash" : "./bin/raydash"},
+  "dependencies": {},
+  "devDependencies": {}
 }
-

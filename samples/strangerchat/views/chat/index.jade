@@ -2,7 +2,6 @@
 !{raydash_videorecord(token,'video_out')}
 a(href="#", id="next") next
 
-
 script(type="text/javascript")
 	$("#next").click(function(){
 		$.ajax({url:'/next/#{token}',method:'GET'})

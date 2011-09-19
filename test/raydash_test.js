@@ -29,4 +29,19 @@ exports.test_changeStream = function(test) {
 				});
 		})
 	})
+};
+exports.test_setCallback = function(test) {
+	test.expect(2);
+	raydash.setCallbackUrl('http://localhost:3000',function() {
+		raydash.getUserInfo(function(cb){
+			test.equal('http://localhost:3000',cb.callbackurl);
+			raydash.setCallbackUrl('http://localhost:3000/callback',function(){
+				raydash.getUserInfo(function(cb2){
+					test.equal('http://localhost:3000/callback',cb2.callbackurl);
+					console.log("Callback url is:" + cb2.callbackurl)
+					test.done();
+				});
+			});
+		});
+	});
 }
